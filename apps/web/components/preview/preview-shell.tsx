@@ -121,7 +121,7 @@ export function PreviewShell({
           <div className="h-5 w-px bg-[var(--dash-border)]" />
 
           <Link href="/dashboard" className="flex shrink-0 items-center">
-            <span className="font-brand text-xl italic text-[var(--dash-text)]">Radiant</span>
+            <span className="font-brand text-xl italic text-[var(--dash-text)]">Surge</span>
           </Link>
 
           <div className="h-5 w-px bg-[var(--dash-border)]" />

@@ -13,7 +13,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
     return (
       <EmptyState
         title="Your first website is 6 minutes away."
-        description="Enter a business name and watch Radiant build something beautiful."
+        description="Enter a business name and watch Surge build something beautiful."
         action={{ label: "Generate your first site", href: "/dashboard/create" }}
       />
     )

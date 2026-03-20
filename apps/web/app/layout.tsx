@@ -27,13 +27,13 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://test.surge.events";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://surgeweb.site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Radiant Web — AI-Powered Website Generation",
-    template: "%s — Radiant Web",
+    default: "Surge — AI-Powered Website Generation",
+    template: "%s — Surge",
   },
   description:
     "Generate a stunning, production-ready website for any local business in 6 minutes. Powered by AI.",
@@ -45,18 +45,18 @@ export const metadata: Metadata = {
     "Next.js",
     "website generation",
   ],
-  authors: [{ name: "Radiant Web" }],
+  authors: [{ name: "Surge" }],
   openGraph: {
     type: "website",
-    siteName: "Radiant Web",
-    title: "Radiant Web — AI-Powered Website Generation",
+    siteName: "Surge",
+    title: "Surge — AI-Powered Website Generation",
     description:
       "Generate a stunning, production-ready website for any local business in 6 minutes. Powered by AI.",
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Radiant Web — AI-Powered Website Generation",
+    title: "Surge — AI-Powered Website Generation",
     description:
       "Generate a stunning, production-ready website for any local business in 6 minutes. Powered by AI.",
   },

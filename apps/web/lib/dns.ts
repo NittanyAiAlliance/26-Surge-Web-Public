@@ -27,13 +27,13 @@ const DNS_CHECK_SUBDOMAIN_PREFIX = "dns-check-probe"
  * to `cname.vercel-dns.com`, which is required for Vercel to route
  * subdomain traffic to the correct project.
  *
- * @param baseDomain - The base domain to check (e.g. "test.surge.events")
+ * @param baseDomain - The base domain to check (e.g. "surgeweb.site")
  * @returns DnsCheckResult with configuration status
  */
 export async function checkDnsConfiguration(
   baseDomain?: string
 ): Promise<DnsCheckResult> {
-  const domain = baseDomain || process.env.DOMAIN || "test.surge.events"
+  const domain = baseDomain || process.env.DOMAIN || "surgeweb.site"
   const probeDomain = `${DNS_CHECK_SUBDOMAIN_PREFIX}.${domain}`
 
   try {
@@ -97,7 +97,7 @@ export async function checkDnsConfiguration(
  * Get the DNS setup instructions for the base domain.
  */
 export function getDnsSetupInstructions(baseDomain?: string): string {
-  const domain = baseDomain || process.env.DOMAIN || "test.surge.events"
+  const domain = baseDomain || process.env.DOMAIN || "surgeweb.site"
 
   return [
     `# Wildcard DNS Setup for ${domain}`,

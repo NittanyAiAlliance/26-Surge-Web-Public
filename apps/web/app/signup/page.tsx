@@ -3,7 +3,7 @@ import { SignupForm } from "@/components/auth/signup-form"
 
 export const metadata = {
   title: "Sign Up",
-  description: "Create a free Radiant Web account and generate your first AI-powered website.",
+  description: "Create a free Surge account and generate your first AI-powered website.",
 }
 
 export default function SignupPage() {
@@ -12,7 +12,7 @@ export default function SignupPage() {
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <Link href="/" className="inline-block">
-            <span className="font-brand text-3xl italic text-[var(--dash-text)]">Radiant</span>
+            <span className="font-brand text-3xl italic text-[var(--dash-text)]">Surge</span>
           </Link>
           <h1 className="mt-6 font-display text-2xl font-semibold text-[var(--dash-text)]">Create your account</h1>
           <p className="mt-2 text-sm text-[var(--dash-text-secondary)]">Start generating beautiful websites for free</p>

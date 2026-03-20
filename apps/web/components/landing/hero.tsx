@@ -46,7 +46,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0, ease: EDITORIAL_EASE }}
         >
-          Radiant generates complete, production-ready websites for any business
+          Surge generates complete, production-ready websites for any business
           in about 6 minutes. From real data. Not templates.
         </motion.p>
 

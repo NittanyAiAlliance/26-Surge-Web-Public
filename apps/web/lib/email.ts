@@ -17,7 +17,7 @@ function getResendClient(): Resend {
 
 // ── Constants ──────────────────────────────────────────
 
-const FROM_EMAIL = "Radiant Web <noreply@test.surge.events>"
+const FROM_EMAIL = "Surge <noreply@surgeweb.site>"
 
 // ── Email Functions ────────────────────────────────────
 
@@ -31,10 +31,10 @@ export async function sendWelcomeEmail(to: string, name?: string): Promise<void>
   await resend.emails.send({
     from: FROM_EMAIL,
     to,
-    subject: "Welcome to Radiant Web",
+    subject: "Welcome to Surge",
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 560px; margin: 0 auto; padding: 40px 20px;">
-        <h1 style="color: #f59e0b; font-size: 24px; margin-bottom: 16px;">Radiant Web</h1>
+        <h1 style="color: #f59e0b; font-size: 24px; margin-bottom: 16px;">Surge</h1>
         <p style="color: #374151; font-size: 16px; line-height: 1.6;">${greeting},</p>
         <p style="color: #374151; font-size: 16px; line-height: 1.6;">
           Thanks for signing up! You can now generate beautiful websites for any local business in seconds.
@@ -42,8 +42,8 @@ export async function sendWelcomeEmail(to: string, name?: string): Promise<void>
         <p style="color: #374151; font-size: 16px; line-height: 1.6;">
           Get started by entering a business name and location — we'll handle the rest.
         </p>
-        <a href="https://test.surge.events/generate" style="display: inline-block; padding: 12px 24px; background: linear-gradient(to right, #f59e0b, #f97316); color: #000; font-weight: 600; text-decoration: none; border-radius: 8px; margin-top: 16px;">Generate Your First Site</a>
-        <p style="color: #9ca3af; font-size: 13px; margin-top: 32px;">— The Radiant Web Team</p>
+        <a href="https://surgeweb.site/generate" style="display: inline-block; padding: 12px 24px; background: linear-gradient(to right, #f59e0b, #f97316); color: #000; font-weight: 600; text-decoration: none; border-radius: 8px; margin-top: 16px;">Generate Your First Site</a>
+        <p style="color: #9ca3af; font-size: 13px; margin-top: 32px;">— The Surge Team</p>
       </div>
     `,
   })
@@ -74,9 +74,9 @@ export async function sendSiteLiveEmail(
           URL: <a href="${siteUrl}" style="color: #f59e0b;">${siteUrl}</a>
         </p>
         <p style="color: #6b7280; font-size: 14px;">
-          You can manage your site from your <a href="https://test.surge.events/dashboard" style="color: #f59e0b;">dashboard</a>.
+          You can manage your site from your <a href="https://surgeweb.site/dashboard" style="color: #f59e0b;">dashboard</a>.
         </p>
-        <p style="color: #9ca3af; font-size: 13px; margin-top: 32px;">— The Radiant Web Team</p>
+        <p style="color: #9ca3af; font-size: 13px; margin-top: 32px;">— The Surge Team</p>
       </div>
     `,
   })
@@ -108,8 +108,8 @@ export async function sendGenerationFailedEmail(
         <p style="color: #374151; font-size: 16px; line-height: 1.6;">
           You can try again from your dashboard. If this keeps happening, our team is looking into it.
         </p>
-        <a href="https://test.surge.events/dashboard" style="display: inline-block; padding: 12px 24px; background: linear-gradient(to right, #f59e0b, #f97316); color: #000; font-weight: 600; text-decoration: none; border-radius: 8px; margin-top: 16px;">Go to Dashboard</a>
-        <p style="color: #9ca3af; font-size: 13px; margin-top: 32px;">— The Radiant Web Team</p>
+        <a href="https://surgeweb.site/dashboard" style="display: inline-block; padding: 12px 24px; background: linear-gradient(to right, #f59e0b, #f97316); color: #000; font-weight: 600; text-decoration: none; border-radius: 8px; margin-top: 16px;">Go to Dashboard</a>
+        <p style="color: #9ca3af; font-size: 13px; margin-top: 32px;">— The Surge Team</p>
       </div>
     `,
   })

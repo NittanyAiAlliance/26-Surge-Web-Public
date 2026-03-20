@@ -20,7 +20,7 @@ export interface DeploymentResult {
   url: string
   /** The Vercel deployment URL (e.g. my-site-xyz.vercel.app) */
   vercelUrl: string
-  /** Custom domain (e.g. my-biz.test.surge.events) */
+  /** Custom domain (e.g. my-biz.surgeweb.site) */
   customDomain: string
   /** Vercel project ID */
   vercelProjectId: string
@@ -55,7 +55,7 @@ export type DeploymentErrorCode =
 
 // ── Constants ───────────────────────────────────────────
 
-const BASE_DOMAIN = process.env.DOMAIN || "test.surge.events"
+const BASE_DOMAIN = process.env.DOMAIN || "surgeweb.site"
 const POLL_INTERVAL_MS = 3_000
 const MAX_POLL_ATTEMPTS = 60
 
@@ -92,7 +92,7 @@ function classifyError(error: unknown): DeploymentErrorCode {
  * 3. Prepare file tree (add configs, dependencies)
  * 4. Create Vercel project (if not exists)
  * 5. Create deployment with all files
- * 6. Add custom domain: [subdomain].test.surge.events
+ * 6. Add custom domain: [subdomain].surgeweb.site
  * 7. Wait for deployment to be ready (poll status)
  * 8. Update project record with Vercel URL and status
  * 9. Return live URL

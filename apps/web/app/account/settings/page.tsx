@@ -5,7 +5,7 @@ import type { User } from "@radiant/db"
 
 export const metadata = {
   title: "Settings",
-  description: "Manage your Radiant Web account settings.",
+  description: "Manage your Surge account settings.",
 }
 
 

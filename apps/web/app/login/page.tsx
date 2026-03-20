@@ -4,7 +4,7 @@ import { LoginForm } from "@/components/auth/login-form"
 
 export const metadata = {
   title: "Log In",
-  description: "Log in to your Radiant Web account to manage your generated websites.",
+  description: "Log in to your Surge account to manage your generated websites.",
 }
 
 export default function LoginPage() {
@@ -13,7 +13,7 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <Link href="/" className="inline-block">
-            <span className="font-brand text-3xl italic text-[var(--dash-text)]">Radiant</span>
+            <span className="font-brand text-3xl italic text-[var(--dash-text)]">Surge</span>
           </Link>
           <h1 className="mt-6 font-display text-2xl font-semibold text-[var(--dash-text)]">Welcome back</h1>
           <p className="mt-2 text-sm text-[var(--dash-text-secondary)]">Log in to your account to continue</p>

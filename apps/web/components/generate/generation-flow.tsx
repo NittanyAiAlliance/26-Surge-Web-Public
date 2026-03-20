@@ -379,7 +379,7 @@ export function GenerationFlow() {
     <div className="-mx-6 -mt-8 lg:-mx-10 lg:-mt-10 min-h-[calc(100vh-3.5rem)] lg:min-h-screen">
       {/* Step indicator bar */}
       <div className="flex items-center justify-between border-b border-[var(--dash-border)] px-6 py-4 lg:px-10">
-        <span className="font-brand text-2xl italic text-[var(--dash-text)]">Radiant</span>
+        <span className="font-brand text-2xl italic text-[var(--dash-text)]">Surge</span>
         <StepIndicator current={step} labels={currentStepMeta} />
         <span className="text-sm font-body text-[var(--dash-text-muted)]">
           Step {displayStepNum} of {currentStepMeta.length}
