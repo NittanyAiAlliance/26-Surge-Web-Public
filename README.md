@@ -1,17 +1,17 @@
-# Radiant
+# Surge
 
 **A 6-minute website that looks like it took 6 weeks.**
 
-Radiant takes any local business — a restaurant, a dental clinic, a law firm, a hair salon — and generates a complete, beautiful, production-ready website from scratch. Not from templates. From real data.
+Surge takes any local business — a restaurant, a dental clinic, a law firm, a hair salon — and generates a complete, beautiful, production-ready website from scratch. Not from templates. From real data.
 
-Enter a business name and location. Radiant pulls in everything it can find: reviews, photos, hours, services, existing web content. Then it builds a website that actually looks like someone spent weeks designing it. The whole thing takes about six minutes.
+Enter a business name and location. Surge pulls in everything it can find: reviews, photos, hours, services, existing web content. Then it builds a website that actually looks like someone spent weeks designing it. The whole thing takes about six minutes.
 
 ---
 
 ### How it works
 
 1. **Enter a business** — Name and city. That's it.
-2. **Radiant does the research** — Google Places data, existing website content, photos, reviews — all pulled in automatically.
+2. **Surge does the research** — Google Places data, existing website content, photos, reviews — all pulled in automatically.
 3. **A real website gets built** — Not a drag-and-drop page. A full, multi-section site with real copy, real structure, and real design.
 4. **Preview and deploy** — See it live instantly at your own subdomain.
 
