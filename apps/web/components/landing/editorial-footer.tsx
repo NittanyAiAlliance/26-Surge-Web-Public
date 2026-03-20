@@ -14,7 +14,7 @@ const FOOTER_LINKS = {
   Company: [
     { label: "About", href: "/about" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "mailto:hello@radiant.dev" },
+    { label: "Contact", href: "mailto:hello@surgeweb.site" },
   ],
   Legal: [
     { label: "Privacy", href: "/privacy" },
@@ -53,7 +53,7 @@ export function EditorialFooter() {
         {/* Brand zone */}
         <div className="mx-auto max-w-[1440px] w-full">
           <h2 className="font-brand text-[clamp(4rem,12vw,10rem)] italic font-light text-white leading-none">
-            Radiant
+            Surge
           </h2>
           <p className="mt-4 font-body text-lg text-white/50 max-w-md">
             Every business deserves a beautiful website.
@@ -91,7 +91,7 @@ export function EditorialFooter() {
           {/* Copyright */}
           <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="font-body text-xs text-white/30">
-              &copy; {new Date().getFullYear()} Radiant
+              &copy; {new Date().getFullYear()} Surge
             </p>
             <p className="font-body text-xs text-white/30">
               Built with AI

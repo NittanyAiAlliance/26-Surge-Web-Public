@@ -23,7 +23,7 @@ export function Pricing() {
               Start free
             </p>
             <p className="mt-6 font-body text-base text-[var(--editorial-ink-soft)] leading-relaxed">
-              Generate one site. Custom subdomain. See what Radiant can do.
+              Generate one site. Custom subdomain. See what Surge can do.
               No credit card needed.
             </p>
             <Link
@@ -63,7 +63,7 @@ export function Pricing() {
 
         <p className="mt-8 font-body text-sm text-[var(--editorial-muted)] text-center">
           Need unlimited sites or white-label?{" "}
-          <a href="mailto:hello@radiant.dev" className="text-[var(--editorial-sapphire)] hover:text-[var(--editorial-ink)] transition-colors underline underline-offset-2">
+          <a href="mailto:hello@surgeweb.site" className="text-[var(--editorial-sapphire)] hover:text-[var(--editorial-ink)] transition-colors underline underline-offset-2">
             Let&apos;s talk.
           </a>
         </p>

@@ -58,7 +58,7 @@ export function HeroDemo() {
         <span className="size-3 rounded-full bg-white/10" />
         <span className="size-3 rounded-full bg-white/10" />
         <span className="size-3 rounded-full bg-white/10" />
-        <span className="ml-3 font-mono text-xs text-white/30">radiant generate</span>
+        <span className="ml-3 font-mono text-xs text-white/30">surge generate</span>
       </div>
 
       <div className="p-6">

@@ -71,7 +71,7 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <span className="font-brand text-2xl italic text-white">Radiant</span>
+          <span className="font-brand text-2xl italic text-white">Surge</span>
         </Link>
 
         {/* Desktop nav links */}
@@ -179,7 +179,7 @@ export function Navbar() {
             >
               <SheetHeader>
                 <SheetTitle className="flex items-center text-white">
-                  <span className="font-brand text-2xl italic">Radiant</span>
+                  <span className="font-brand text-2xl italic">Surge</span>
                 </SheetTitle>
                 <SheetDescription className="sr-only">
                   Navigation menu

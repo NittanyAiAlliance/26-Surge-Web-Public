@@ -51,7 +51,7 @@ export function EditorialNav() {
             href="/"
             className="font-brand text-2xl md:text-3xl italic font-light text-[var(--editorial-ink)] tracking-[0.02em]"
           >
-            Radiant
+            Surge
           </Link>
 
           {/* Desktop nav */}
@@ -128,7 +128,7 @@ export function EditorialNav() {
           >
             <div className="flex h-16 items-center justify-between px-6">
               <span className="font-brand text-2xl italic font-light text-[var(--editorial-ink)]">
-                Radiant
+                Surge
               </span>
               <button
                 onClick={() => setMenuOpen(false)}

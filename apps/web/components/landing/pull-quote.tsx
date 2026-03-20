@@ -9,7 +9,7 @@ export function PullQuote() {
         <div className="border-t border-[var(--editorial-border)]" />
         <div className="py-16 md:py-24">
           <ScrollRevealText
-            text="I showed the Radiant site to my web designer. He thought I paid someone $5,000."
+            text="I showed the Surge site to my web designer. He thought I paid someone $5,000."
             className="font-brand text-3xl md:text-5xl italic font-light text-[var(--editorial-ink)] leading-snug tracking-[0.01em] text-center"
           />
           <p className="mt-8 font-body text-sm text-[var(--editorial-muted)] text-center">

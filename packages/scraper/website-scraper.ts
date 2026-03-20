@@ -10,19 +10,19 @@ import type {
   ColorPalette,
 } from "./types"
 
-const DEFAULT_FIRECRAWL_URL = "https://api.firecrawl.dev"
+const DEFAULT_SCRAPER_URL = "https://api.firecrawl.dev"
 const SCRAPE_TIMEOUT_MS = 30_000
 
-function getFirecrawlConfig(): { apiUrl: string; apiKey: string } {
-  const apiKey = process.env.FIRECRAWL_API_KEY
+function getScraperConfig(): { apiUrl: string; apiKey: string } {
+  const apiKey = process.env.SCRAPER_API_KEY
   if (!apiKey) {
-    throw new Error("Missing FIRECRAWL_API_KEY environment variable")
+    throw new Error("Missing SCRAPER_API_KEY environment variable")
   }
-  const apiUrl = process.env.FIRECRAWL_API_URL ?? DEFAULT_FIRECRAWL_URL
+  const apiUrl = process.env.SCRAPER_API_URL ?? DEFAULT_SCRAPER_URL
   return { apiUrl, apiKey }
 }
 
-interface FirecrawlScrapeResponse {
+interface ScrapeApiResponse {
   success: boolean
   data?: {
     markdown?: string
@@ -40,15 +40,15 @@ interface FirecrawlScrapeResponse {
 }
 
 /**
- * Scrape a business's existing website using the Firecrawl API.
- * Supports both self-hosted Firecrawl (set FIRECRAWL_API_URL) and Firecrawl Cloud.
+ * Scrape a business's existing website via the scraping API.
+
  *
  * Returns null if the website doesn't exist, is unreachable, or returns no content.
  */
 export async function scrapeWebsite(
   url: string,
 ): Promise<ScrapedWebsiteData | null> {
-  const { apiUrl, apiKey } = getFirecrawlConfig()
+  const { apiUrl, apiKey } = getScraperConfig()
 
   if (!url || !url.startsWith("http")) {
     return null
@@ -87,22 +87,22 @@ export async function scrapeWebsite(
     ) {
       return null
     }
-    throw new Error(`Firecrawl request failed: ${message}`)
+    throw new Error(`Scrape request failed: ${message}`)
   }
 
   if (!response.ok) {
     if (response.status === 402 || response.status === 429) {
       throw new Error(
-        `Firecrawl API rate limit or billing issue (HTTP ${response.status})`,
+        `Scraper API rate limit or billing issue (HTTP ${response.status})`,
       )
     }
     // Site unreachable, 404, etc. — return null
     return null
   }
 
-  let body: FirecrawlScrapeResponse
+  let body: ScrapeApiResponse
   try {
-    body = (await response.json()) as FirecrawlScrapeResponse
+    body = (await response.json()) as ScrapeApiResponse
   } catch {
     return null
   }
@@ -1152,7 +1152,7 @@ interface SubpageExtraction {
 }
 
 /**
- * Scrape a single URL using the Firecrawl API and return the raw HTML.
+ * Scrape a single URL and return the raw HTML.
  * Returns null on failure (timeout, network error, non-OK status).
  * Throws on billing/rate-limit errors (402/429).
  */
@@ -1160,7 +1160,7 @@ async function scrapePageHtml(
   url: string,
   onlyMainContent: boolean,
 ): Promise<string | null> {
-  const { apiUrl, apiKey } = getFirecrawlConfig()
+  const { apiUrl, apiKey } = getScraperConfig()
 
   let response: Response
   try {
@@ -1195,21 +1195,21 @@ async function scrapePageHtml(
     ) {
       return null
     }
-    throw new Error(`Firecrawl request failed: ${message}`)
+    throw new Error(`Scrape request failed: ${message}`)
   }
 
   if (!response.ok) {
     if (response.status === 402 || response.status === 429) {
       throw new Error(
-        `Firecrawl API rate limit or billing issue (HTTP ${response.status})`,
+        `Scraper API rate limit or billing issue (HTTP ${response.status})`,
       )
     }
     return null
   }
 
-  let body: FirecrawlScrapeResponse
+  let body: ScrapeApiResponse
   try {
-    body = (await response.json()) as FirecrawlScrapeResponse
+    body = (await response.json()) as ScrapeApiResponse
   } catch {
     return null
   }

@@ -139,7 +139,7 @@ function SidebarContent({
       {/* ── Brand ── */}
       <div className={`flex items-center border-b border-[var(--dash-border)] ${collapsed ? "justify-center px-2 py-5" : "px-5 py-5"}`}>
         <Link href="/" className="font-brand text-2xl italic text-[var(--dash-text)]">
-          {collapsed ? "R" : "Radiant"}
+          {collapsed ? "S" : "Surge"}
         </Link>
       </div>
 
@@ -286,7 +286,7 @@ export function SidebarNav() {
       {/* ── Mobile top bar (lg:hidden) ── */}
       <div className="fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between border-b border-[var(--dash-border)] bg-[var(--dash-bg)] px-4 lg:hidden">
         <Link href="/" className="font-brand text-xl italic text-[var(--dash-text)]">
-          Radiant
+          Surge
         </Link>
         <button
           type="button"
